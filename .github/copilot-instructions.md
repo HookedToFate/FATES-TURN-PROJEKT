@@ -31,6 +31,7 @@ Kurzfassung: Dieses Repo ist ein Bauplan für AI-native Softwareentwicklung. Lie
 - Externe Modelle/Keys: Keine Secrets ins Repo. Wenn Integrationen (Gemini/ChatGPT/Reviewer) nötig sind, verweise auf Codespaces/Repo-Secrets und nutze ENV-Platzhalter.
 - Reviewer-Workflow: Falls kein automatischer Reviewer aktiv ist, ergänze im PR eine kurze „Review Notes“-Sektion (Risiken, Annahmen, Testabdeckung).
 
+
 ## Erfolgsnachweis pro Aufgabe (Contract)
 - Inputs: verlinktes Issue/Prompt + relevante Blueprint-Abschnitte.
 - Outputs: Code/Docs/Tests + CI + `docs/ai-logs/...json` + PR mit klarer Zusammenfassung und "Wie ausführen".
@@ -41,3 +42,4 @@ Hinweise
 
 Spezial-Profile
 - Für eine domänenspezifische RP-Fantasy-Charakter-Generator-KI siehe `.github/copilot-instructions.rp-fantasy-character-creator.md`.
+- Für maximale kreative Freiheit in privaten, erwachsenen Erzählungen, aktiviere den Hardmode: siehe `.github/copilot-instructions.hardmode.md`.
