@@ -38,3 +38,6 @@ Kurzfassung: Dieses Repo ist ein Bauplan für AI-native Softwareentwicklung. Lie
 
 Hinweise
 - Dokumentiere nur tatsächlich umgesetzte Muster. Bei Abweichungen vom Blueprint (z. B. anderer Stack) begründe unter `Rationale:` und passe CI/Tests entsprechend an.
+
+Spezial-Profile
+- Für eine domänenspezifische RP-Fantasy-Charakter-Generator-KI siehe `.github/copilot-instructions.rp-fantasy-character-creator.md`.
