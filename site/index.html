@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Brain Garden – Fate Tools</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Brain Garden Toolkit</p>
+    <h1>Choose your creative guide</h1>
+    <p class="lede">Four micro-tools for divination, story scaffolding, and note tending. Launch any module directly or explore the data powering them.</p>
+    <nav class="hero-actions" aria-label="Primary">
+      <a class="hero-link" href="modules/oracle.html">Fate Oracle</a>
+      <a class="hero-link" href="modules/vault.html">Idea Vault</a>
+      <a class="hero-link" href="modules/nyssa.html">Nyssa Adventure</a>
+      <a class="hero-link" href="modules/prompts.html">Prompt Changer</a>
+    </nav>
+  </div>
+</header>
+
+<main class="main">
+  <section class="module-grid" aria-labelledby="module-grid-heading">
+    <div class="section-heading">
+      <h2 id="module-grid-heading">Modules</h2>
+      <p>Each module can be opened from here or individually via the <code>/site/modules/</code> directory.</p>
+    </div>
+    <div class="cards">
+      <article class="module-card">
+        <h3>Fate Oracle</h3>
+        <p>Draw 1, 3, or 5 card spreads with optional reversed pulls, daily seeds, writing prompts, and Markdown export.</p>
+        <a href="modules/oracle.html" class="card-link">Open module</a>
+      </article>
+      <article class="module-card">
+        <h3>Idea Vault</h3>
+        <p>Filter, search, and generate markdown notes with typed metadata and quick copy-friendly output.</p>
+        <a href="modules/vault.html" class="card-link">Open module</a>
+      </article>
+      <article class="module-card">
+        <h3>Nyssa Fate Adventure</h3>
+        <p>Traverse a choose-your-path tale with persistent state, oracle assists, and Markdown path export.</p>
+        <a href="modules/nyssa.html" class="card-link">Open module</a>
+      </article>
+      <article class="module-card">
+        <h3>Prompt Changer</h3>
+        <p>Transform any idea into four actionable prompts—brainstorm, reframe, constrain, and play.</p>
+        <a href="modules/prompts.html" class="card-link">Open module</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="data-section" aria-labelledby="data-heading">
+    <div class="section-heading">
+      <h2 id="data-heading">Data files</h2>
+      <p>Core JSON files live under <code>/site/data/</code>.</p>
+    </div>
+    <ul class="data-list">
+      <li><a href="data/oracle_deck.json">oracle_deck.json</a> – 16-card starter Fate Oracle deck.</li>
+      <li><a href="data/vault_index.json">vault_index.json</a> – Idea vault index with 3 demo entries.</li>
+      <li><a href="data/nyssa_story.json">nyssa_story.json</a> – Seven-node Nyssa story graph.</li>
+      <li><a href="data/i18n.json">i18n.json</a> – Title translations (English &amp; German).</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="footer">
+  <small>&copy; 2024 Brain Garden tools. Built for prompt-driven creativity.</small>
+</footer>
+</body>
+</html>

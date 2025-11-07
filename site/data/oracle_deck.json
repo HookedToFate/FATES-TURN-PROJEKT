@@ -1,0 +1,134 @@
+{
+  "deck_name": "Fate Oracle",
+  "version": 1,
+  "cards": [
+    {
+      "id": "sun",
+      "title": "The Sun",
+      "upright_meaning": "Radiant clarity dissolves the fog; celebrate the warmth that reveals your path.",
+      "reversed_meaning": "Glare blinds; adjust your pace before optimism burns you out.",
+      "prompt_hook": "Let daylight uncover the secret you almost forgot.",
+      "tags": ["clarity", "joy"]
+    },
+    {
+      "id": "moon",
+      "title": "The Moon",
+      "upright_meaning": "Dream-sense heightens intuition; follow the shimmering thread.",
+      "reversed_meaning": "Illusions ripple; ground yourself before chasing reflections.",
+      "prompt_hook": "Write a scene where moonlight rewrites the rules.",
+      "tags": ["intuition", "mystery"]
+    },
+    {
+      "id": "star",
+      "title": "The Star",
+      "upright_meaning": "Hope returns in gentle pulses; replenish and recalibrate your aim.",
+      "reversed_meaning": "Constellations scatter; remember why you wished in the first place.",
+      "prompt_hook": "Let a distant glimmer guide an impossible choice.",
+      "tags": ["hope", "renewal"]
+    },
+    {
+      "id": "tide",
+      "title": "Shifting Tide",
+      "upright_meaning": "Change swells; trust the rhythm pulling you forward.",
+      "reversed_meaning": "Undercurrents drag; anchor yourself before the next wave.",
+      "prompt_hook": "An incoming tide brings a message in foam.",
+      "tags": ["change", "flow"]
+    },
+    {
+      "id": "mirror",
+      "title": "Glass Mirror",
+      "upright_meaning": "See yourself reflected with honest affection; alignment follows.",
+      "reversed_meaning": "Distorted echoes mislead; polish the surface before deciding.",
+      "prompt_hook": "A mirror shows the version of you who already chose.",
+      "tags": ["reflection", "identity"]
+    },
+    {
+      "id": "ember",
+      "title": "Quiet Ember",
+      "upright_meaning": "A small flame waits for kindling; nurture it patiently.",
+      "reversed_meaning": "Ash smothers spark; protect what remains from careless winds.",
+      "prompt_hook": "Describe the ember that outlasted the storm.",
+      "tags": ["potential", "patience"]
+    },
+    {
+      "id": "key",
+      "title": "Hidden Key",
+      "upright_meaning": "A solution is within reach; the right question unlocks it.",
+      "reversed_meaning": "Locks multiply; share the key or remain outside.",
+      "prompt_hook": "A key appears with a note only you can read.",
+      "tags": ["solution", "access"]
+    },
+    {
+      "id": "path",
+      "title": "Forked Path",
+      "upright_meaning": "Two routes call; either leads forward when chosen with intent.",
+      "reversed_meaning": "Hesitation breeds detours; decide before the light fades.",
+      "prompt_hook": "Chart the crossroads and the guide who waits there.",
+      "tags": ["decision", "journey"]
+    },
+    {
+      "id": "storm",
+      "title": "Gathering Storm",
+      "upright_meaning": "Energy crackles; harness it before release.",
+      "reversed_meaning": "Tension snaps; rebuild after the surge.",
+      "prompt_hook": "A storm speaks in a voice you recognize.",
+      "tags": ["conflict", "power"]
+    },
+    {
+      "id": "garden",
+      "title": "Walled Garden",
+      "upright_meaning": "Protection and growth coexist; tend what you planted.",
+      "reversed_meaning": "Walls choke new shoots; open a gate for fresh air.",
+      "prompt_hook": "A garden reveals the promise of a future harvest.",
+      "tags": ["nurture", "boundaries"]
+    },
+    {
+      "id": "whisper",
+      "title": "Hidden Whisper",
+      "upright_meaning": "A quiet clue arrives in time; listen with your whole body.",
+      "reversed_meaning": "Rumors cloud intent; confirm before acting.",
+      "prompt_hook": "Let a whisper rewrite the mission briefing.",
+      "tags": ["secrets", "insight"]
+    },
+    {
+      "id": "gateway",
+      "title": "Luminous Gateway",
+      "upright_meaning": "An invitation appears; stepping through begins a new pattern.",
+      "reversed_meaning": "Threshold stays closed until you release what you clutch.",
+      "prompt_hook": "Cross a gateway that hums with stored memories.",
+      "tags": ["threshold", "opportunity"]
+    },
+    {
+      "id": "loom",
+      "title": "Fate Loom",
+      "upright_meaning": "Threads weave together; collaborate to finish the pattern.",
+      "reversed_meaning": "Knots tighten; patience and perspective untangle them.",
+      "prompt_hook": "A loom records the story you are weaving right now.",
+      "tags": ["collaboration", "structure"]
+    },
+    {
+      "id": "compass",
+      "title": "True Compass",
+      "upright_meaning": "Direction clicks into place; you are oriented toward purpose.",
+      "reversed_meaning": "Needle spins; recalibrate with someone you trust.",
+      "prompt_hook": "A compass points to an unexpected ally.",
+      "tags": ["guidance", "navigation"]
+    },
+    {
+      "id": "seed",
+      "title": "Restless Seed",
+      "upright_meaning": "Plant the idea now; roots will find their path.",
+      "reversed_meaning": "Dormancy lingers; conditions need tending before sprouting.",
+      "prompt_hook": "Describe the seed that refuses to wait.",
+      "tags": ["beginnings", "potential"]
+    },
+    {
+      "id": "shadow",
+      "title": "Companion Shadow",
+      "upright_meaning": "Sit with the unseen self; integration is insight.",
+      "reversed_meaning": "Suppressed fears leak through; name them to transform them.",
+      "prompt_hook": "Let a shadow tell its side of the story.",
+      "tags": ["introspection", "healing"]
+    }
+  ]
+}

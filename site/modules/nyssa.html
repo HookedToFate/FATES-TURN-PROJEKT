@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Nyssa Fate Adventure</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/nyssa.css">
+</head>
+<body>
+<main class="nyssa-app" data-module="nyssa">
+  <header class="module-header">
+    <h1>Nyssa Fate Adventure</h1>
+    <p>Choose paths, set flags, and weave oracle assistance into each scene.</p>
+  </header>
+
+  <section class="nyssa-toolbar" aria-label="Navigation">
+    <div class="history-controls">
+      <button type="button" data-action="back">Back</button>
+      <button type="button" data-action="forward">Forward</button>
+      <button type="button" class="ghost" data-action="reset">Reset adventure</button>
+    </div>
+    <div class="utility-controls">
+      <button type="button" data-action="oracle">Oracle assist</button>
+      <button type="button" class="ghost" data-action="export">Copy path Markdown</button>
+    </div>
+  </section>
+
+  <section class="nyssa-status" aria-live="polite">
+    <p class="status-message" data-feedback></p>
+    <p class="flags" data-flags>Flags: none set yet.</p>
+    <p class="error-message" data-error hidden></p>
+  </section>
+
+  <section class="nyssa-passage" aria-labelledby="passage-heading">
+    <h2 id="passage-heading">Current passage</h2>
+    <article class="nyssa-prose" data-prose></article>
+    <div class="nyssa-choices" data-choices></div>
+  </section>
+
+  <section class="nyssa-oracle" aria-labelledby="oracle-heading">
+    <h2 id="oracle-heading">Oracle assist</h2>
+    <div class="oracle-card" data-oracle-card>Draw an oracle card to guide the next scene.</div>
+  </section>
+
+  <section class="nyssa-export" aria-labelledby="export-heading">
+    <h2 id="export-heading">Adventure log</h2>
+    <textarea data-export rows="12" readonly placeholder="Your path Markdown will appear here."></textarea>
+    <div class="export-actions">
+      <button type="button" data-copy disabled>Copy Markdown</button>
+    </div>
+  </section>
+</main>
+
+<script type="module" src="../js/nyssa.js"></script>
+</body>
+</html>

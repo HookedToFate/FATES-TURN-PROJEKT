@@ -1,0 +1,66 @@
+{
+  "story_title": "Nyssa Fate Adventure",
+  "start": "dusk-door",
+  "nodes": [
+    {
+      "id": "dusk-door",
+      "title": "A Door in Dusk",
+      "prose": "Nyssa finds a door of dusk-glass resting upright in the alley. Night wind slips through its seams, humming like distant strings.\n\n- She can enter without knowing where it leads.\n- Or pause long enough to ask for an omen.",
+      "choices": [
+        { "label": "Step through the dusk door", "to": "echo-hall" },
+        { "label": "Wait on the porch of omens", "to": "oracle-porch" }
+      ]
+    },
+    {
+      "id": "oracle-porch",
+      "title": "Porch of Whispers",
+      "prose": "A travelling oracle fans a deck across a crate. Symbols reform to match Nyssa's breath. The oracle smiles, inviting her to draw.\n\nNyssa pockets the drawn sigil, feeling a thread tug at her future.",
+      "choices": [
+        { "label": "Carry the omen into the hall", "to": "echo-hall" }
+      ],
+      "flags_set": ["consulted_oracle"]
+    },
+    {
+      "id": "echo-hall",
+      "title": "Echo Hall",
+      "prose": "Inside, corridors bloom in every direction. Brass mirrors hum softly, capturing each echo.\n\nOne mirror flickers with a map, another with moonlight dripping down a stairwell.",
+      "choices": [
+        { "label": "Study the mirror map", "to": "map-library" },
+        { "label": "Follow the moonlit stair", "to": "garden-gate" }
+      ]
+    },
+    {
+      "id": "map-library",
+      "title": "Map Library",
+      "prose": "Scrolls hover in the air, cycling through routes that only exist at twilight. Nyssa catches a parchment that warms in her hands.\n\nThe map redraws the hall with glowing threads leading outside.",
+      "choices": [
+        { "label": "Return to the moonlit stair", "to": "garden-gate" }
+      ],
+      "flags_set": ["map_found"]
+    },
+    {
+      "id": "garden-gate",
+      "title": "Garden Gate",
+      "prose": "A silver gate opens to two paths: one descends toward a moonwell, the other climbs into a wind-carved pass.\n\nThe air tastes of copper; fate leans close.",
+      "choices": [
+        { "label": "Take the hidden moonwell path", "to": "moonwell", "requires_flags": ["map_found"] },
+        { "label": "Climb straight to the cliff", "to": "final-cliff" }
+      ]
+    },
+    {
+      "id": "moonwell",
+      "title": "Moonwell Shrine",
+      "prose": "Moonwater collects in a stone basin. Reflections reveal choices Nyssa has yet to make. When she touches the surface, a quiet oath blooms in her chest.",
+      "choices": [
+        { "label": "Carry the oath to the cliff", "to": "final-cliff" }
+      ],
+      "flags_set": ["moonwell_oath"]
+    },
+    {
+      "id": "final-cliff",
+      "title": "Cliff of Futures",
+      "prose": "On the cliff's edge, threads of possibility weave into a luminous braid. Whether she holds the moonwell oath or not, Nyssa must choose which strand to follow next.\n\nThe adventure pauses here, ready for your next chapter.",
+      "choices": []
+    }
+  ]
+}

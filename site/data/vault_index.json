@@ -1,0 +1,28 @@
+{
+  "notes": [
+    {
+      "path": "data/vault/2024-06-18-lantern-concept.md",
+      "title": "Lantern Concept",
+      "date": "2024-06-18",
+      "type": "idea",
+      "tags": ["lantern", "market", "seed"],
+      "excerpt": "Sketch of a lantern market that opens only at blue hour. Vendors trade ideas for light; each flame remembers a wish." 
+    },
+    {
+      "path": "data/vault/2024-05-02-moonwell-memory.md",
+      "title": "Moonwell Memory",
+      "date": "2024-05-02",
+      "type": "memory",
+      "tags": ["nyssa", "moonwell", "oracle"],
+      "excerpt": "Nyssa heard the moonwell hum like a chorus. The water held the reflections of choices she hadn't made yet." 
+    },
+    {
+      "path": "data/vault/2024-04-21-sigil-draft.md",
+      "title": "Sigil Draft",
+      "date": "2024-04-21",
+      "type": "text",
+      "tags": ["sigil", "story", "draft"],
+      "excerpt": "Drafting a sigil that loops the protagonist back to the start if spoken aloud. Needs a gentle counter-charm." 
+    }
+  ]
+}

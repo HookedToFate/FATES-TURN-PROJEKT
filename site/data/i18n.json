@@ -1,0 +1,14 @@
+{
+  "en": {
+    "title": "Brain Garden",
+    "draw": "Draw",
+    "vault": "Vault",
+    "oracle": "Oracle"
+  },
+  "de": {
+    "title": "Gedankengarten",
+    "draw": "Ziehen",
+    "vault": "Gewölbe",
+    "oracle": "Orakel"
+  }
+}

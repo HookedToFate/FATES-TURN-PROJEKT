@@ -1,0 +1,228 @@
+@import url('base.css');
+
+body {
+  padding: clamp(1.5rem, 5vw, 3rem);
+  display: flex;
+  justify-content: center;
+}
+
+.vault-app {
+  width: min(1100px, 100%);
+  background: var(--surface-elevated);
+  border-radius: var(--border-radius-lg);
+  padding: clamp(1.5rem, 3vw, 3rem);
+  box-shadow: var(--shadow-lg);
+  display: grid;
+  gap: clamp(1.75rem, 4vw, 3rem);
+}
+
+.module-header h1 {
+  margin: 0;
+  font-size: clamp(2.1rem, 5vw, 3rem);
+}
+
+.module-header p {
+  margin: 0.5rem 0 0;
+  color: var(--text-secondary);
+}
+
+.filters h2,
+.note-list h2,
+.note-generator h2 {
+  margin: 0 0 0.75rem;
+}
+
+.filter-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+label span {
+  font-weight: 600;
+  color: var(--text-secondary);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid rgba(41, 50, 115, 0.18);
+  padding: 0.55rem 0.75rem;
+  font: inherit;
+  background: var(--surface-muted);
+  color: var(--text-primary);
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  border: none;
+  border-radius: var(--border-radius-sm);
+  padding: 0.65rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(120deg, var(--accent), var(--accent-strong));
+  color: #fff;
+  cursor: pointer;
+  transition: transform var(--transition-base), filter var(--transition-base);
+  box-shadow: var(--shadow-sm);
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(0);
+  filter: brightness(0.95);
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+button.ghost {
+  background: transparent;
+  color: var(--accent-strong);
+  border: 1px solid rgba(91, 109, 255, 0.3);
+  box-shadow: none;
+}
+
+button.ghost:hover:not(:disabled) {
+  background: rgba(91, 109, 255, 0.08);
+}
+
+.status-message {
+  min-height: 1.2em;
+  color: var(--text-secondary);
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+[data-results] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.note-card {
+  background: linear-gradient(180deg, rgba(91, 109, 255, 0.08), rgba(91, 109, 255, 0.02));
+  border-radius: var(--border-radius-sm);
+  border: 1px solid rgba(91, 109, 255, 0.14);
+  padding: 1.25rem;
+  display: grid;
+  gap: 0.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.note-card h3 {
+  margin: 0;
+}
+
+.note-meta {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.note-excerpt {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.tag-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(91, 109, 255, 0.12);
+  color: var(--accent-strong);
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-right: 0.5rem;
+}
+
+.active-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.active-tags button {
+  background: rgba(91, 109, 255, 0.12);
+  color: var(--accent-strong);
+  border-radius: 999px;
+  border: none;
+  padding: 0.35rem 0.75rem;
+  box-shadow: none;
+}
+
+.note-generator form {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.form-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.form-grid .full {
+  grid-column: 1 / -1;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.output {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+#note-output {
+  border: 1px dashed rgba(91, 109, 255, 0.3);
+  background: var(--surface-muted);
+  font-family: var(--font-mono);
+}
+
+.output-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button.copied {
+  filter: brightness(1.1);
+  box-shadow: none;
+}
+
+.empty-state {
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+@media (max-width: 720px) {
+  body {
+    padding: 1rem;
+  }
+}

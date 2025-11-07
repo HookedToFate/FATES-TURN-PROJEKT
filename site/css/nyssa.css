@@ -1,0 +1,241 @@
+@import url('base.css');
+
+body {
+  padding: clamp(1.5rem, 5vw, 3rem);
+  display: flex;
+  justify-content: center;
+}
+
+.nyssa-app {
+  width: min(960px, 100%);
+  background: var(--surface-elevated);
+  border-radius: var(--border-radius-lg);
+  padding: clamp(1.5rem, 3vw, 3rem);
+  box-shadow: var(--shadow-lg);
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 2.75rem);
+  position: relative;
+}
+
+.nyssa-app[data-loading="true"]::after {
+  content: 'Loading adventure…';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: rgba(248, 249, 252, 0.85);
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  color: var(--accent-strong);
+}
+
+.module-header h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 3rem);
+}
+
+.module-header p {
+  margin: 0.5rem 0 0;
+  color: var(--text-secondary);
+}
+
+.nyssa-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.history-controls,
+.utility-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+button {
+  border: none;
+  border-radius: var(--border-radius-sm);
+  padding: 0.65rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(120deg, var(--accent), var(--accent-strong));
+  color: #fff;
+  cursor: pointer;
+  transition: transform var(--transition-base), box-shadow var(--transition-base), filter var(--transition-base);
+  box-shadow: var(--shadow-sm);
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(0);
+  filter: brightness(0.95);
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+button.ghost {
+  background: transparent;
+  color: var(--accent-strong);
+  border: 1px solid rgba(91, 109, 255, 0.3);
+  box-shadow: none;
+}
+
+button.ghost:hover:not(:disabled) {
+  background: rgba(91, 109, 255, 0.08);
+}
+
+button.copied {
+  filter: brightness(1.1);
+  box-shadow: none;
+}
+
+.nyssa-status {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.status-message {
+  margin: 0;
+  color: var(--text-secondary);
+  min-height: 1.2em;
+}
+
+.flags {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.flag-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(91, 109, 255, 0.12);
+  color: var(--accent-strong);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.error-message {
+  margin: 0;
+  color: var(--negative);
+  font-weight: 600;
+}
+
+.nyssa-passage {
+  background: var(--surface-muted);
+  border-radius: var(--border-radius-sm);
+  padding: 1.5rem;
+  border: 1px solid rgba(91, 109, 255, 0.15);
+}
+
+.nyssa-passage h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.65rem;
+}
+
+.nyssa-prose p {
+  margin: 0 0 1rem;
+  line-height: 1.6;
+}
+
+.nyssa-prose ul {
+  margin: 0 0 1rem 1.2rem;
+  padding: 0;
+}
+
+.nyssa-choices ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.choice-item {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.choice-hint {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.choice-empty {
+  margin: 0;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.nyssa-oracle {
+  background: var(--surface-muted);
+  border-radius: var(--border-radius-sm);
+  padding: 1.5rem;
+  border: 1px solid rgba(91, 109, 255, 0.15);
+  display: grid;
+  gap: 1rem;
+}
+
+.oracle-card {
+  min-height: 6rem;
+}
+
+.oracle-card-body h4 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.oracle-card-body .orientation {
+  margin: 0.25rem 0 0.5rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+}
+
+.oracle-card-body .prompt span {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.nyssa-export textarea {
+  width: 100%;
+  min-height: 12rem;
+  padding: 1rem;
+  border-radius: var(--border-radius-sm);
+  border: 1px dashed rgba(91, 109, 255, 0.25);
+  background: var(--surface-muted);
+  font-family: var(--font-mono);
+  resize: vertical;
+}
+
+.export-actions {
+  margin-top: 1rem;
+}
+
+@media (max-width: 720px) {
+  body {
+    padding: 1rem;
+  }
+
+  .nyssa-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

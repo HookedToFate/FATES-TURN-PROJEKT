@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Idea Vault</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/vault.css">
+</head>
+<body>
+<main class="vault-app" data-module="vault">
+  <header class="module-header">
+    <h1>Idea / Memory / Text Vault</h1>
+    <p>Browse indexed notes, filter by mood, tags, or type, and generate new Markdown entries.</p>
+  </header>
+
+  <section class="filters" aria-labelledby="filters-heading">
+    <h2 id="filters-heading">Filters &amp; search</h2>
+    <div class="filter-grid">
+      <label>
+        <span>Search excerpts</span>
+        <input type="search" id="vault-search" placeholder="Search notes…" autocomplete="off">
+      </label>
+      <label>
+        <span>Type</span>
+        <select id="vault-type">
+          <option value="">All types</option>
+          <option value="idea">Idea</option>
+          <option value="memory">Memory</option>
+          <option value="text">Text</option>
+        </select>
+      </label>
+      <label>
+        <span>Tag</span>
+        <select id="vault-tag">
+          <option value="">All tags</option>
+        </select>
+      </label>
+      <label>
+        <span>From date</span>
+        <input type="date" id="vault-date-start">
+      </label>
+      <label>
+        <span>To date</span>
+        <input type="date" id="vault-date-end">
+      </label>
+    </div>
+    <div class="active-tags" data-active-tags aria-live="polite"></div>
+    <p class="status-message" aria-live="polite" data-feedback></p>
+  </section>
+
+  <section class="note-list" aria-labelledby="notes-heading">
+    <div class="section-heading">
+      <h2 id="notes-heading">Indexed notes</h2>
+      <button type="button" class="ghost" data-refresh>Reload index</button>
+    </div>
+    <ul data-results role="list"></ul>
+  </section>
+
+  <section class="note-generator" aria-labelledby="generator-heading">
+    <h2 id="generator-heading">Generate a Markdown note</h2>
+    <form id="generator-form">
+      <div class="form-grid">
+        <label>
+          <span>Title</span>
+          <input type="text" name="title" required placeholder="Lantern Market">
+        </label>
+        <label>
+          <span>Date</span>
+          <input type="date" name="date" required>
+        </label>
+        <label>
+          <span>Type</span>
+          <select name="type" required>
+            <option value="idea">Idea</option>
+            <option value="memory">Memory</option>
+            <option value="text">Text</option>
+          </select>
+        </label>
+        <label>
+          <span>Mood (optional)</span>
+          <input type="text" name="mood" placeholder="curious">
+        </label>
+        <label>
+          <span>People (comma separated)</span>
+          <input type="text" name="people" placeholder="Nyssa, Oracle">
+        </label>
+        <label>
+          <span>Place</span>
+          <input type="text" name="place" placeholder="Dusk Alley">
+        </label>
+        <label class="full">
+          <span>Tags (comma separated)</span>
+          <input type="text" name="tags" placeholder="lantern,seed">
+        </label>
+        <label class="full">
+          <span>Body text</span>
+          <textarea name="body" rows="6" required placeholder="Write the note body…"></textarea>
+        </label>
+      </div>
+      <div class="form-actions">
+        <button type="submit">Generate Markdown</button>
+        <button type="button" class="ghost" data-clear>Clear form</button>
+      </div>
+    </form>
+    <div class="output" aria-live="polite">
+      <textarea id="note-output" rows="12" readonly placeholder="Generated Markdown will appear here."></textarea>
+      <div class="output-actions">
+        <button type="button" data-copy disabled>Copy Markdown</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script type="module" src="../js/vault.js"></script>
+</body>
+</html>

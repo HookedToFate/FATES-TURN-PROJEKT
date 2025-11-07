@@ -1,0 +1,85 @@
+:root {
+  --font-sans: 'InterVariable', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --surface: #f5f6fb;
+  --surface-elevated: #ffffff;
+  --surface-muted: rgba(91, 109, 255, 0.06);
+  --surface-strong: #e8ebff;
+  --text-primary: #121826;
+  --text-secondary: #5c6679;
+  --text-muted: #7b849b;
+  --accent: #5b6dff;
+  --accent-soft: rgba(91, 109, 255, 0.18);
+  --accent-strong: #3f51f7;
+  --positive: #2f9d62;
+  --negative: #c23a4b;
+  --border-radius-sm: 18px;
+  --border-radius-md: 22px;
+  --border-radius-lg: 28px;
+  --shadow-sm: 0 14px 28px -24px rgba(41, 50, 115, 0.55);
+  --shadow-md: 0 22px 40px -30px rgba(41, 50, 115, 0.4);
+  --shadow-lg: 0 32px 64px -36px rgba(41, 50, 115, 0.35);
+  --transition-base: 180ms ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface: #0f141c;
+    --surface-elevated: #151c27;
+    --surface-muted: rgba(91, 109, 255, 0.22);
+    --surface-strong: #1e2736;
+    --text-primary: #f7f9ff;
+    --text-secondary: #b2bdd6;
+    --text-muted: #8b95ac;
+    --accent: #8393ff;
+    --accent-soft: rgba(131, 147, 255, 0.25);
+    --accent-strong: #aab6ff;
+    --shadow-sm: 0 18px 40px -32px rgba(7, 12, 24, 0.7);
+    --shadow-md: 0 24px 60px -38px rgba(7, 12, 24, 0.65);
+    --shadow-lg: 0 40px 90px -45px rgba(7, 12, 24, 0.6);
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  background: radial-gradient(140% 140% at 50% -20%, var(--accent-soft), transparent 60%), var(--surface);
+  color: var(--text-primary);
+  margin: 0;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(91, 109, 255, 0.45);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

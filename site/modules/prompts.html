@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Prompt Changer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/prompts.css">
+</head>
+<body>
+<main class="prompts-app" data-module="prompts">
+  <header class="module-header">
+    <h1>Prompt Changer</h1>
+    <p>Transform any idea into four actionable prompts.</p>
+  </header>
+
+  <section class="prompts-input" aria-labelledby="prompts-input-heading">
+    <h2 id="prompts-input-heading">Input</h2>
+    <label class="input-field">
+      <span>Idea or snippet</span>
+      <textarea id="prompts-source" rows="5" placeholder="Write an idea, theme, or fragment…"></textarea>
+    </label>
+    <div class="input-actions">
+      <button type="button" id="prompts-generate">Generate prompts</button>
+      <button type="button" class="ghost" id="prompts-clear">Clear</button>
+    </div>
+    <p class="status-message" aria-live="polite" data-feedback></p>
+  </section>
+
+  <section class="prompts-output" aria-labelledby="prompts-output-heading">
+    <h2 id="prompts-output-heading">Prompt bundle</h2>
+    <div class="prompt-grid">
+      <article class="prompt-card" data-output="brainstorm">
+        <h3>Brainstorming prompt</h3>
+        <p data-text>Enter an idea to generate a prompt.</p>
+        <button type="button" data-copy-target>Copy prompt</button>
+      </article>
+      <article class="prompt-card" data-output="reframe">
+        <h3>Reframing prompt</h3>
+        <p data-text>Enter an idea to generate a prompt.</p>
+        <button type="button" data-copy-target>Copy prompt</button>
+      </article>
+      <article class="prompt-card" data-output="constraint">
+        <h3>Constraint-tight prompt</h3>
+        <p data-text>Enter an idea to generate a prompt.</p>
+        <button type="button" data-copy-target>Copy prompt</button>
+      </article>
+      <article class="prompt-card" data-output="playful">
+        <h3>Playful prompt</h3>
+        <p data-text>Enter an idea to generate a prompt.</p>
+        <button type="button" data-copy-target>Copy prompt</button>
+      </article>
+    </div>
+    <div class="bundle-actions">
+      <button type="button" data-copy-bundle disabled>Copy entire bundle</button>
+    </div>
+  </section>
+</main>
+
+<script type="module" src="../js/prompts.js"></script>
+</body>
+</html>

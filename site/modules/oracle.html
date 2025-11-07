@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Fate Oracle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/oracle.css">
+</head>
+<body>
+<main class="oracle-app" data-module="oracle">
+  <header class="module-header">
+    <h1>Fate Oracle</h1>
+    <p>Draw cards, weave prompts, and export your reading.</p>
+  </header>
+
+  <section class="controls" aria-labelledby="draw-controls-heading">
+    <h2 id="draw-controls-heading">Draw controls</h2>
+    <div class="control-row">
+      <div class="draw-buttons" role="group" aria-label="Draw count">
+        <button type="button" data-draw="1">Draw 1</button>
+        <button type="button" data-draw="3">Draw 3</button>
+        <button type="button" data-draw="5">Draw 5</button>
+      </div>
+      <label class="toggle">
+        <input type="checkbox" id="allow-reversed">
+        <span>Allow reversed cards</span>
+      </label>
+      <label class="seed">
+        <span>Daily seed</span>
+        <input type="date" id="seed-date" aria-describedby="seed-help">
+      </label>
+      <button type="button" class="ghost" id="clear-seed">Clear seed</button>
+    </div>
+    <p id="seed-help" class="hint">Set a date for a repeatable spread. Empty date gives a fresh draw each time.</p>
+    <p class="status-message" aria-live="polite" data-feedback></p>
+  </section>
+
+  <section class="spread" aria-labelledby="spread-heading">
+    <h2 id="spread-heading">Current spread</h2>
+    <div class="cards" data-cards></div>
+    <button type="button" id="write-with-this" disabled>Write with this</button>
+    <dialog class="oracle-modal" id="prompt-modal">
+      <form method="dialog">
+        <header>
+          <h3>Writing prompts</h3>
+          <button type="submit" aria-label="Close">Close</button>
+        </header>
+        <div class="modal-body" data-prompts></div>
+        <footer>
+          <button type="button" data-copy-prompts>Copy prompts</button>
+        </footer>
+      </form>
+    </dialog>
+  </section>
+
+  <section class="export" aria-labelledby="export-heading">
+    <h2 id="export-heading">Export Markdown</h2>
+    <textarea id="export-markdown" rows="10" readonly></textarea>
+    <div class="export-actions">
+      <button type="button" data-copy-export disabled>Copy Markdown</button>
+    </div>
+  </section>
+</main>
+
+<script type="module" src="../js/oracle.js"></script>
+</body>
+</html>
