@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-abyss text-white font-display antialiased;
+  background-image: radial-gradient(circle at top, rgba(255, 200, 255, 0.08), transparent 45%),
+    radial-gradient(circle at 30% 20%, rgba(127, 91, 255, 0.1), transparent 40%),
+    radial-gradient(circle at 70% 10%, rgba(92, 255, 192, 0.08), transparent 55%);
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(248, 138, 213, 0.35);
+}
+
+.scroll-veil {
+  mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+}
+
+.floating-orb {
+  animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) translateX(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-18px) translateX(6px) scale(1.05);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px) scale(1);
+  }
+}

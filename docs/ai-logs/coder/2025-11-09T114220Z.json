@@ -1,0 +1,17 @@
+{
+  "timestamp": "2025-11-09T11:42:20Z",
+  "role": "coder",
+  "prompt_summary": "Craft a React + Tailwind personal site with an artistic, magical, game-inspired tone while keeping the system flexible for future iterations.",
+  "key_decisions": [
+    "Scaffolded a Vite + React + TypeScript stack with Tailwind to stay lightweight and expressive.",
+    "Modeled content as lore fragments, constellations, quests, and relics so narrative data can evolve without layout rewrites.",
+    "Swapped Vitest for Jest because the environment forbids opening local sockets, ensuring tests can run in CI.",
+    "Added bespoke gradients, animated orbs, and modular sections (hero, lore grid, constellations, quest ledger, whisper ticker) to hit the requested mood."
+  ],
+  "tests": [
+    {
+      "command": "npm test",
+      "result": "pass"
+    }
+  ]
+}

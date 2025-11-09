@@ -27,7 +27,6 @@ jobs:
           if [ -d tests ]; then pip install pytest; pytest -q; else echo "No tests directory - skipping"; fi
 
   node-tests:
-  node-tests:
     name: Node.js tests
     runs-on: ubuntu-latest
     steps:
@@ -39,4 +38,4 @@ jobs:
       - name: Install
         run: npm ci
       - name: Test
-        run: npm test --if-present
+        run: npm test
